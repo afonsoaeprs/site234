@@ -1,0 +1,529 @@
+*{
+  box-sizing: border-box;
+  margin:0px;
+  padding:0px;
+}
+
+html{
+  scroll-behavior:smooth; /* faz um scroll com animação quando se clica no menu */
+}
+
+body {
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+
+  margin: 0px;
+  padding: 0px;
+  background-color:#050816;
+  color:#e5e7eb;
+}
+
+p{
+  text-align: justify;
+}
+
+
+header.topo{
+  position:relative;
+  isolation:isolate;
+}
+
+.hero-overlay{
+  max-width:900px;
+  margin:0 auto;
+  padding-inline:20px;
+  padding-top:110px;
+  padding-bottom:210px;
+  background:linear-gradient(135deg, rgba(3,7,18,0.85), rgba(21,94,117,0.75));
+  color:#f9fafb;
+  border-radius:18px;
+  box-shadow:0 18px 45px rgba(15,23,42,0.65);
+  backdrop-filter:blur(6px);
+}
+
+.hero-tagline{
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  font-size:0.78rem;
+  color:#a5f3fc;
+  margin-bottom:10px;
+}
+
+#vietname-titulo{
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size:72px;
+  margin-bottom:8px;
+}
+
+#vietname-subtitulo{
+  text-align:left;
+  padding-top:6px;
+  padding-bottom:18px;
+  max-width:520px;
+  font-size:1rem;
+  color:#e5e7eb;
+}
+
+.hero-button{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 22px;
+  border-radius:999px;
+  border:none;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:#f9fafb;
+  font-weight:600;
+  font-size:0.95rem;
+  text-decoration:none;
+  box-shadow:0 12px 25px rgba(34,197,94,0.45);
+  cursor:pointer;
+  transition:transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.hero-button::after{
+  content:"↘";
+  font-size:0.95rem;
+}
+
+.hero-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 38px rgba(22,163,74,0.6);
+  background:linear-gradient(135deg,#4ade80,#16a34a);
+}
+
+
+
+.altura0{
+  margin:0px;
+  padding:0px;
+  height:0px;
+  /* evita o menu sticky tapar o alvo quando clicamos em âncoras (#intro, etc.) */
+  scroll-margin-top: 60px;
+}
+
+.baixo50px{
+  padding-bottom:50px;
+}
+
+.meio{
+  text-align:center;
+}
+
+.topo{
+  margin:0px;
+  background-image: url(../img/vietname-topo.jpg);
+  background-size:cover;
+  padding-top:100px;
+  padding-bottom:200px;
+  background-position:center;
+}
+
+#principal{
+  padding:32px 26px 48px;
+  background-image:url(../img/f1.jpg);
+  background-size: cover;
+  background-position:center;
+  background-attachment:fixed;
+  padding-bottom:40px;
+}
+
+.secao{
+  max-width:1024px;
+  margin:0 auto 40px;
+  padding:22px 20px 26px;
+  background:rgba(15,23,42,0.88);
+  border-radius:18px;
+  box-shadow:0 18px 45px rgba(15,23,42,0.75);
+  border:1px solid rgba(148,163,184,0.28);
+}
+
+.secao + .secao{
+  margin-top:10px;
+}
+
+.secao-descricao{
+  text-align:center;
+  margin-bottom:18px;
+  color:#cbd5f5;
+}
+
+.intro-grid{
+  display:grid;
+  gap:18px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  margin-top:18px;
+}
+
+.intro-card{
+  background:radial-gradient(circle at top left, rgba(56,189,248,0.16), rgba(15,23,42,0.9));
+  border-radius:14px;
+  padding:16px 18px 18px;
+  border:1px solid rgba(148,163,184,0.45);
+}
+
+.intro-card h4{
+  margin-bottom:8px;
+  font-size:1.05rem;
+  color:#e5e7eb;
+}
+
+.intro-card ul{
+  padding-left:18px;
+  margin:0;
+}
+
+.intro-card li{
+  margin-bottom:6px;
+}
+
+
+h2{
+  font-size:50px;
+}
+
+h3{
+  text-align:center;
+  text-transform: uppercase;
+  letter-spacing:0.14em;
+  font-size:1.05rem;
+  margin-bottom:10px;
+  color:#e5e7eb;
+}
+
+h4{
+  margin-top:0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background: linear-gradient(90deg,#020617,#0f172a,#022c22);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow:0 12px 30px rgba(15,23,42,0.9);
+}
+
+.nav-item {
+  float: left;
+}
+
+.nav-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight:500;
+  font-size:0.95rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  transition:background-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+}
+
+.nav-item a:hover{
+  background-color:rgba(15,23,42,0.75);
+  transform:translateY(-1px);
+}
+
+.city-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+
+.city-card{
+  background:radial-gradient(circle at top, rgba(56,189,248,0.18), rgba(15,23,42,0.96));
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(148,163,184,0.55);
+  box-shadow:0 20px 45px rgba(15,23,42,0.85);
+  display:flex;
+  flex-direction:column;
+  transition:transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.city-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 28px 60px rgba(15,23,42,0.95);
+  border-color:rgba(56,189,248,0.7);
+}
+
+.city-card img{
+  display:block;
+  width:100%;
+  height:190px;
+  object-fit:cover;
+}
+
+.city-content{
+  padding:14px 16px 16px;
+}
+
+.city-content h4{
+  margin-bottom:6px;
+}
+
+.city-content p{
+  margin-bottom:6px;
+}
+
+.city-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  font-size:0.75rem;
+}
+
+.city-tags span{
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid rgba(148,163,184,0.7);
+  background:rgba(15,23,42,0.9);
+}
+
+.bloco{
+  display:block;
+  clear: both;
+  width:100%;
+  padding-top:20px;
+}
+
+.destaque-experiencias,
+.destaque-galeria{
+  max-width:1024px;
+  margin:0 auto;
+}
+
+.planeamento-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+
+.planeamento-card{
+  background:radial-gradient(circle at top right, rgba(34,197,94,0.18), rgba(15,23,42,0.96));
+  border-radius:14px;
+  padding:16px 18px 18px;
+  border:1px solid rgba(34,197,94,0.45);
+}
+
+.planeamento-card.checklist{
+  grid-column:1 / -1;
+}
+
+.checklist{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.checklist li{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+}
+
+.check-toggle{
+  border-radius:999px;
+  width:26px;
+  height:26px;
+  border:1px solid rgba(148,163,184,0.7);
+  background:rgba(15,23,42,0.9);
+  color:#6b7280;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0.8rem;
+  transition:background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+
+.check-toggle[aria-pressed="true"]{
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  border-color:rgba(34,197,94,0.9);
+  color:#ecfdf5;
+  transform:scale(0.96);
+}
+
+.bloco50esq{
+  float:left;
+  width:50%;
+  padding-right:10px;
+}
+
+.bloco50dir{
+  float:right;
+  width:50%;
+  padding-left:10px;
+}
+
+.bloco30esq{
+  float:left;
+  width:30%;
+  padding-right:10px;
+}
+
+.bloco40meio{
+  float:left;
+  width:40%;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.bloco30dir{
+  float:right;
+  width:30%;
+  padding-left:10px;
+}
+
+.im_altura150{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+}
+
+.fim0{
+  width:100%;
+  height:0px;
+  clear:both;
+}
+
+.site-footer{
+  padding:18px 20px 22px;
+  text-align:center;
+  background:#020617;
+  color:#9ca3af;
+  font-size:0.9rem;
+  border-top:1px solid rgba(31,41,55,0.9);
+}
+
+#btn-topo{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  border:none;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:#ecfdf5;
+  font-size:1.1rem;
+  cursor:pointer;
+  box-shadow:0 14px 30px rgba(21,128,61,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(10px);
+  transition:opacity 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  z-index:30;
+}
+
+#btn-topo.visivel{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+
+#btn-topo:hover{
+  box-shadow:0 18px 38px rgba(21,128,61,0.75);
+}
+
+.secao-reveal,
+.reveal{
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity 0.45s ease, transform 0.45s ease;
+}
+
+.secao-reveal.visivel,
+.reveal.visivel{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/*------------ MEDIA QUERIES ---------------*/
+
+@media (max-width: 1100px) {
+
+  #vietname-subtitulo{
+    background-color:rgba(15,23,42,0.7);  /* cor de fundo com transparenência de 0.7 */
+    border-radius: 10px;  /* arredondamento dos 4 cantos */
+  }
+
+  #principal {
+    background-image: url(../img/f3.jpg);
+
+    /* tornar a imagem de fundo mais clara */
+    background-color: rgba(255, 255, 255, 0.6);  /* 0.6 é a força da cor branca */
+    background-blend-mode:color;
+    /* fim de tornar a imagem de fundo mais clara */ 
+  }
+
+  .intro-grid{
+    grid-template-columns:1fr;
+  }
+
+  .city-grid{
+    grid-template-columns:1fr;
+  }
+
+  .planeamento-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+@media (max-width:1000px) {
+
+  .bloco30esq,.bloco30dir,.bloco40meio{
+    width:100%;
+    padding-left:0px;
+    padding-right:0px;
+  }
+
+  .bloco30esq,.bloco40meio{
+    padding-bottom:20px;
+  }
+
+}
+
+
+@media (max-width:800px) {
+
+  .bloco50esq,.bloco50dir{
+    width:100%;
+    padding-left:0px;
+    padding-right:0px;
+  }
+
+  .bloco50esq{
+    padding-bottom:20px;
+  }
+
+}
+
+
+
+
+/*---------- FIM DE MEDIA QUERIES ------------*/
