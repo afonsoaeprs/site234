@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vietname - Um Guia Visual</title>
+
+  <!-- FONTES -->
+   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+  
+  <!-- fim de FONTES -->
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<div id="intro-overlay" class="intro-overlay" aria-label="Ecrã inicial Vietname">
+  <div class="intro-overlay-inner">
+    <p class="intro-badge">Viagem virtual</p>
+    <h1 class="intro-titulo">Respira fundo.</h1>
+    <p class="intro-texto">Carrega no botão, ouve uma música calma e deixa-te levar numa viagem pelo Vietname.</p>
+    <button id="btn-entrar" class="intro-botao">Clique para começar</button>
+  </div>
+</div>
+<div id="yt-player-container" aria-hidden="true"></div>
+
+<div id="cima" class="altura0"></div>
+<header class="meio topo"> 
+  <div class="hero-overlay">
+    <p class="hero-tagline">Descubra a energia do Sudeste Asiático</p>
+    <h1 id="vietname-titulo">Vietname</h1>
+    <p id="vietname-subtitulo">Paisagens tropicais, cidades vibrantes e uma cultura inesquecível.</p>
+    <a href="#cidades" class="hero-button">Explorar cidades</a>
+  </div>
+</header>
+
+<nav aria-label="Menu principal">
+  <ul>
+    <li class="nav-item active"><a href="#cima">Início</a></li>
+    <li class="nav-item"><a href="#intro">Intro</a></li>
+    <li class="nav-item"><a href="#cidades">Cidades</a></li>
+    <li class="nav-item"><a href="#planeamento">Planeamento</a></li>
+    <li class="nav-item"><a href="#experiencias">Experiências</a></li>
+  </ul>
+</nav>
+
+<!-- DIVISÃO PRINCIPAL -->
+<div id="principal">
+  
+  <div id="intro" class="altura0 baixo50px" aria-hidden="true"></div>
+  <section aria-labelledby="intro-titulo" class="secao secao-reveal">
+    <h3 id="intro-titulo">Introdução</h3>
+
+    <p>O Vietname situa-se no Sudeste Asiático, ao longo do mar da China Meridional. Tem um formato alongado, com um território estreito no centro e mais largo nas regiões norte e sul.</p>
+    <p>O país é conhecido por <strong>arrozais em socalcos</strong>, <strong>baías com milhares de ilhotas calcárias</strong>, uma gastronomia fresca e aromática e uma história marcada por períodos de ocupação e guerra que moldaram a sua identidade moderna.</p>
+    <p>Hoje, o Vietname é um destino em rápido crescimento, combinando tradição e modernidade: pagodes antigos ao lado de cafés minimalistas, mercados caóticos perto de avenidas com arranha‑céus e uma população jovem, acolhedora e curiosa em relação ao mundo.</p>
+
+    <div class="intro-grid">
+      <div class="intro-card">
+        <h4>Porque visitar o Vietname?</h4>
+        <ul>
+          <li>Paisagens naturais muito variadas (montanhas, praias e delta do Mekong).</li>
+          <li>Cidades cheias de vida, mercados noturnos e cafés tradicionais.</li>
+          <li>Custo de vida acessível para viajantes europeus.</li>
+        </ul>
+      </div>
+      <div class="intro-card">
+        <h4>Informação rápida</h4>
+        <ul>
+          <li><strong>Capital:</strong> Hanói</li>
+          <li><strong>Idioma:</strong> Vietnamita</li>
+          <li><strong>Moeda:</strong> Dong vietnamita (VND)</li>
+          <li><strong>Clima:</strong> Tropical e subtropical, com estação das chuvas.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div id="cidades" class="altura0 baixo50px" aria-hidden="true"></div>
+  <section aria-labelledby="cidades-titulo" class="secao secao-reveal">
+    <h3 id="cidades-titulo">Cidades em destaque</h3>
+    <p class="secao-descricao">Do norte montanhoso ao sul tropical, estas são algumas das cidades mais interessantes para incluir no seu roteiro pelo Vietname.</p>
+
+    <div class="city-grid">
+      <article class="city-card reveal">
+        <img src="img/vietname-mapa.jpg" alt="Vista panorâmica de Hanói com lago e edifícios históricos" loading="lazy">
+        <div class="city-content">
+          <h4>Hanói</h4>
+          <p>Capital do país, localizada no norte, combina lagos tranquilos, bairros antigos cheios de vida e arquitetura com influências francesa e asiática.</p>
+          <p class="city-tags"><span>História</span><span>Cultura</span><span>Gastronomia de rua</span></p>
+        </div>
+      </article>
+
+      <article class="city-card reveal">
+        <img src="img/ho-chi-minh.jpg" alt="Arranha-céus em Ho Chi Minh City à noite" loading="lazy">
+        <div class="city-content">
+          <h4>Ho Chi Minh City</h4>
+          <p>Principal centro económico do Vietname, no sul do país, com arranha-céus modernos, mercados populares e museus sobre a história recente.</p>
+          <p class="city-tags"><span>Cidade grande</span><span>Vida noturna</span><span>Compras</span></p>
+        </div>
+      </article>
+
+      <article class="city-card reveal">
+        <img src="img/f2.jpg" alt="Praia iluminada pelo sol em Da Nang" loading="lazy">
+        <div class="city-content">
+          <h4>Da Nang</h4>
+          <p>Cidade costeira com praias extensas, pontes iluminadas e fácil acesso a pontos turísticos como Hoi An e as Montanhas de Mármore.</p>
+          <p class="city-tags"><span>Praia</span><span>Natureza</span></p>
+        </div>
+      </article>
+
+      <article class="city-card reveal">
+        <img src="img/f3.jpg" alt="Ruas históricas com lanternas em Hoi An" loading="lazy">
+        <div class="city-content">
+          <h4>Hoi An</h4>
+          <p>Cidade histórica declarada Património Mundial da UNESCO, conhecida pelas lanternas coloridas, casas antigas e atmosfera romântica.</p>
+          <p class="city-tags"><span>UNESCO</span><span>Arquitetura</span><span>Fotografia</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="planeamento" class="secao secao-reveal" aria-labelledby="planeamento-titulo">
+    <h3 id="planeamento-titulo">Planeie a sua viagem</h3>
+    <p class="secao-descricao">Alguns passos simples para organizar uma primeira visita ao Vietname de forma tranquila.</p>
+
+    <div class="planeamento-grid">
+      <div class="planeamento-card reveal">
+        <h4>1. Escolha a melhor época</h4>
+        <p>Entre novembro e abril costuma haver menos chuva em grande parte do país, sendo um bom período para combinar norte e sul.</p>
+      </div>
+      <div class="planeamento-card reveal">
+        <h4>2. Defina o roteiro</h4>
+        <p>Para 10–15 dias, foque em 2 ou 3 regiões: por exemplo, Hanói + Ha Long + Hoi An, ou Ho Chi Minh City + delta do Mekong + Da Nang.</p>
+      </div>
+      <div class="planeamento-card reveal">
+        <h4>3. Trate de vistos e vacinas</h4>
+        <p>Verifique com antecedência se precisa de visto eletrónico (e-visa) e confirme as recomendações de saúde para a sua nacionalidade.</p>
+      </div>
+      <div class="planeamento-card checklist reveal" aria-label="Checklist rápido de viagem">
+        <h4>Checklist rápido</h4>
+        <ul class="checklist">
+          <li><button type="button" class="check-toggle" aria-pressed="false">✔</button><span>Passaporte com validade mínima de 6 meses.</span></li>
+          <li><button type="button" class="check-toggle" aria-pressed="false">✔</button><span>Seguro de viagem com cobertura de saúde.</span></li>
+          <li><button type="button" class="check-toggle" aria-pressed="false">✔</button><span>Cartão ou app com câmbio para VND.</span></li>
+          <li><button type="button" class="check-toggle" aria-pressed="false">✔</button><span>Adaptador de tomada universal.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="experiencias" class="secao secao-reveal" aria-labelledby="experiencias-titulo">
+    <h3 id="experiencias-titulo">Experiências imperdíveis</h3>
+    <p class="secao-descricao">Três formas diferentes de sentir o Vietname: pela gastronomia, pela natureza e pela vida urbana.</p>
+
+    <div class="experiencias-grid">
+      <article class="experiencia-card reveal">
+        <div class="experiencia-thumb comida"></div>
+        <div class="experiencia-content">
+          <h4>Sabores de rua</h4>
+          <p>Experimente pho fumegante ao pequeno-almoço, banh mi crocante ao almoço e cafés com leite condensado nas esplanadas.</p>
+          <p class="city-tags"><span>Street food</span><span>Café vietnamita</span></p>
+        </div>
+      </article>
+
+      <article class="experiencia-card reveal">
+        <div class="experiencia-thumb natureza"></div>
+        <div class="experiencia-content">
+          <h4>Navegar entre arrozais</h4>
+          <p>Faça um passeio de barco pelos rios do delta do Mekong ou pelos campos alagados do norte, em contacto direto com a natureza.</p>
+          <p class="city-tags"><span>Natureza</span><span>Barcos</span></p>
+        </div>
+      </article>
+
+      <article class="experiencia-card reveal">
+        <div class="experiencia-thumb noite"></div>
+        <div class="experiencia-content">
+          <h4>Noites de lanternas</h4>
+          <p>Caminhe por ruas iluminadas por lanternas coloridas, mercados noturnos e música ao vivo nas cidades históricas.</p>
+          <p class="city-tags"><span>Vida noturna</span><span>Mercados</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <section class="secao secao-reveal destaque-galeria" aria-label="Galeria visual do Vietname">
+    <h3>Galeria</h3>
+    <p class="secao-descricao">Um pequeno mosaico visual inspirado nas paisagens e cidades do Vietname.</p>
+
+    <div class="galeria-grid">
+      <figure class="galeria-item grande">
+        <img src="img/ho-chi-minh.jpg" alt="Vista aérea de Ho Chi Minh City iluminada à noite" loading="lazy">
+      </figure>
+      <figure class="galeria-item vertical">
+        <img src="img/f2.jpg" alt="Praia vietnamita com mar calmo e areia clara" loading="lazy">
+      </figure>
+      <figure class="galeria-item">
+        <img src="img/f3.jpg" alt="Ruas antigas com lanternas coloridas no Vietname" loading="lazy">
+      </figure>
+      <figure class="galeria-item">
+        <img src="img/fundo-claro2.jpg" alt="Paisagem natural montanhosa no Vietname" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <div class="fim0"></div>
+
+
+</div> <!-- fim da div principal -->
+
+<button id="btn-topo" aria-label="Voltar ao topo">↑</button>
+
+<footer class="site-footer">
+  <p>Guia visual do Vietname — criado para inspirar a sua próxima viagem.</p>
+  <p class="creditos">Créditos: <strong>Afonso Gomes</strong> · 10‑H1 · 2026</p>
+</footer>
+
+<script src="js/ativar_menu.js"></script>
+
+<!--
+https://www.geeksforgeeks.org/javascript/how-to-make-active-navbar-in-html-css-and-javascript/
+ -->
+
+</body>
+
+</html>
